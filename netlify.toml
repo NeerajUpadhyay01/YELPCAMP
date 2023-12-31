@@ -1,0 +1,3 @@
+[build]
+  command = "nodemon app.js"
+  functions = "functions"

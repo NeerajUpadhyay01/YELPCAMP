@@ -56,9 +56,9 @@ app.use(
 //   },
 // });
 
-store.on("error", function (e) {
-  console.log("Session Store Error!", e);
-});
+// store.on("error", function (e) {
+//   console.log("Session Store Error!", e);
+// });
 
 const sessionConfig = {
   store,

@@ -19,15 +19,15 @@ const User = require("./models/user");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 
-// const dbUrl = "mongodb://127.0.0.1:27017/yelp-camp";
-// mongoose
-//   .connect(dbUrl)
-//   .then(() => {
-//     console.log("Database Connected");
-//   })
-//   .catch((e) => {
-//     console.log(e);
-//   });
+const dbUrl = "mongodb://127.0.0.1:27017/yelp-camp";
+mongoose
+  .connect(dbUrl)
+  .then(() => {
+    console.log("Database Connected");
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 
 const userRoutes = require("./routes/users");
 const campgroundRoutes = require("./routes/campgrounds.js");

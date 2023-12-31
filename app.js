@@ -61,7 +61,7 @@ app.use(
 // });
 
 const sessionConfig = {
-  store,
+  //store,
   name: "Session",
   secret: "thisshouldbeabettersecret!",
   resave: false,

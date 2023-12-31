@@ -48,17 +48,17 @@ app.use(
   })
 );
 
-// const store = MongoStore.create({
-//   mongoUrl: dbUrl,
-//   touchAfter: 24 * 60 * 60,
-//   crypto: {
-//     secret: "thisshouldbeabettersecret",
-//   },
-// });
+const store = MongoStore.create({
+  mongoUrl: dbUrl,
+  touchAfter: 24 * 60 * 60,
+  crypto: {
+    secret: "thisshouldbeabettersecret",
+  },
+});
 
-// store.on("error", function (e) {
-//   console.log("Session Store Error!", e);
-// });
+store.on("error", function (e) {
+  console.log("Session Store Error!", e);
+});
 
 const sessionConfig = {
   //store,

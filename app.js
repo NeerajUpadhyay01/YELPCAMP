@@ -20,15 +20,20 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 
 // const dbUrl = "mongodb://127.0.0.1:27017/yelp-camp";
-const dbUrl = "mongodb+srv://first-user:N3IgSbtEL789N12b@cluster0.rxcf0wk.mongodb.net/?retryWrites=true&w=majority";
-mongoose
-  .connect(dbUrl)
-  .then(() => {
-    console.log("Database Connected");
-  })
-  .catch((e) => {
-    console.log(e);
-  });
+// const dbUrl = "mongodb+srv://first-user:N3IgSbtEL789N12b@cluster0.rxcf0wk.mongodb.net/?retryWrites=true&w=majority";
+// mongoose
+//   .connect(dbUrl)
+//   .then(() => {
+//     console.log("Database Connected");
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
+mongoose.connect('mongodb+srv://first-user:N3IgSbtEL789N12b@cluster0.rxcf0wk.mongodb.net/?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  tls: true, // Add this option
+});
 
 const userRoutes = require("./routes/users");
 const campgroundRoutes = require("./routes/campgrounds.js");
